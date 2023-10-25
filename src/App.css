@@ -1,15 +1,17 @@
 .app {
   margin: auto;
   flex-direction: column;
-  gap: 1rem;
+  gap: 1em;
   display: flex;
+  padding: 1em;
 }
 
 .screen {
-  padding: 1em;
+  padding: 32px;
   background-color: var(--bg-screen);
   text-align: right;
   border-radius: 8px;
+  font-size: 48px;
 }
 
 .buttons {
