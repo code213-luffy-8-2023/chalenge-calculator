@@ -1,0 +1,131 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-size: 32px;
+  font-weight: 700;
+  font-family: "League Spartan", sans-serif;
+}
+
+.dark {
+  --bg-main: hsl(222, 26%, 31%);
+  --bg-toggle: hsl(223, 31%, 20%);
+  --bg-screen: hsl(224, 36%, 15%);
+
+  --bg-key: hsl(225, 21%, 49%);
+  --bg-key-hover: #a1b3e2;
+  --bg-key-shadow: hsl(224, 28%, 35%);
+  --bg-key-toggle: hsl(6, 63%, 50%);
+  --bg-key-toggle-hover: #f96c5b;
+  --bg-key-toggle-shadow: hsl(6, 70%, 34%);
+  --bg-key-default: hsl(30, 25%, 89%);
+  --bg-key-default-shadow: hsl(28, 16%, 65%);
+
+  --text-default: hsl(0, 0%, 100%);
+  --text-secondary: hsl(221, 14%, 31%);
+
+  --bg-numbers: var(--bg-key-default);
+  --bg-numbers-hover: white;
+  --text-numbers: var(--text-secondary);
+
+  --text-op-color: var(--text-default);
+}
+
+.light,
+.default:not(.override) {
+  /* declare variables for light theme */
+  --bg-main: hsl(0, 0%, 90%);
+  --bg-toggle: hsl(0, 5%, 81%);
+  --bg-screen: hsl(0, 0%, 93%);
+
+  --bg-key: hsl(185, 42%, 37%);
+  --bg-key-hover: #61b6bb;
+  --bg-key-shadow: hsl(185, 58%, 25%);
+  --bg-key-toggle: hsl(25, 98%, 40%);
+  --bg-key-toggle-hover: #ff8b38;
+
+  --bg-key-toggle-shadow: hsl(25, 99%, 27%);
+  --bg-key-default: hsl(45, 7%, 89%);
+  --bg-key-default-shadow: hsl(35, 11%, 61%);
+
+  --text-secondary: hsl(0, 0%, 100%);
+  --text-default: hsl(60, 10%, 19%);
+
+  --bg-numbers: var(--bg-key-default);
+  --bg-numbers-hover: white;
+  --text-numbers: var(--text-default);
+
+  --text-op-color: var(--text-secondary);
+}
+
+.contrast {
+  /* declare variables for light theme */
+  --bg-main: hsl(268, 75%, 9%);
+  --bg-toggle: hsl(268, 71%, 12%);
+  --bg-screen: hsl(268, 71%, 12%);
+
+  --bg-key: hsl(281, 89%, 26%);
+  --bg-key-hover: #8631b0;
+
+  --bg-key-shadow: hsl(285, 91%, 52%);
+  --bg-key-toggle: hsl(176, 100%, 44%);
+  --bg-key-toggle-hover: #94fff9;
+
+  --bg-key-toggle-shadow: hsl(177, 92%, 70%);
+  --bg-key-default: hsl(268, 47%, 21%);
+  --bg-key-default-shadow: hsl(290, 70%, 36%);
+
+  --text-default: hsl(52, 100%, 62%);
+  --text-secondary: hsl(0, 0%, 100%);
+
+  --bg-numbers: var(--bg-key-default);
+  --bg-numbers-hover: #6b34ac;
+  --text-numbers: var(--text-default);
+
+  --text-op-color: var(--text-secondary);
+}
+
+body {
+  background-color: var(--bg-main);
+  color: var(--text-default);
+}
+
+#root {
+  min-height: 100vh;
+  display: flex;
+}
+
+@media (prefers-color-scheme: dark) {
+  .default:not(.override) {
+    --bg-main: hsl(222, 26%, 31%);
+    --bg-toggle: hsl(223, 31%, 20%);
+    --bg-screen: hsl(224, 36%, 15%);
+
+    --bg-key: hsl(225, 21%, 49%);
+    --bg-key-hover: #a1b3e2;
+    --bg-key-shadow: hsl(224, 28%, 35%);
+    --bg-key-toggle: hsl(6, 63%, 50%);
+    --bg-key-toggle-hover: #f96c5b;
+    --bg-key-toggle-shadow: hsl(6, 70%, 34%);
+    --bg-key-default: hsl(30, 25%, 89%);
+    --bg-key-default-shadow: hsl(28, 16%, 65%);
+
+    --text-default: hsl(0, 0%, 100%);
+    --text-secondary: hsl(221, 14%, 31%);
+
+    --bg-numbers: var(--bg-key-default);
+    --bg-numbers-hover: white;
+    --text-numbers: var(--text-secondary);
+
+    --text-op-color: var(--text-default);
+  }
+}
+
+@media screen and (max-width: 475px) {
+  * {
+    font-size: 24px;
+  }
+  #root {
+    padding: 1em;
+  }
+}

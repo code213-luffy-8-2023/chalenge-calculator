@@ -1,0 +1,77 @@
+.app {
+  margin: auto;
+  flex-direction: column;
+  gap: 1rem;
+  display: flex;
+}
+
+.screen {
+  padding: 1em;
+  background-color: var(--bg-screen);
+  text-align: right;
+  border-radius: 8px;
+}
+
+.buttons {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 0.7em;
+  background-color: var(--bg-toggle);
+  padding: 1em;
+  border-radius: 8px;
+}
+
+.buttons button:last-child,
+.buttons button:nth-last-child(2) {
+  grid-column: span 2;
+}
+
+.buttons button {
+  padding: 0.5em;
+  border-radius: 8px;
+  border: none;
+  background-color: var(--bg-key-default);
+  box-shadow: 0px 4px 0px var(--bg-key-default-shadow);
+  color: var(--text-numbers);
+  transition: all 0.2s ease-in-out;
+  text-transform: uppercase;
+}
+
+.buttons button.del,
+.buttons button.reset {
+  background-color: var(--bg-key);
+  box-shadow: 0 4px 0 var(--bg-key-shadow);
+  color: var(--text-op-color);
+}
+
+.buttons button.del:hover,
+.buttons button.reset:hover {
+  background-color: var(--bg-key-hover);
+}
+
+.buttons button.del:active,
+.buttons button.reset:active {
+  box-shadow: 0px 4px 0px var(--bg-key-hover);
+}
+
+.buttons button.equal {
+  background-color: var(--bg-key-toggle);
+  color: var(--text-op-color);
+  box-shadow: 0 4px 0 var(--bg-key-toggle-shadow);
+}
+
+.buttons button.equal:hover {
+  background-color: var(--bg-key-toggle-hover);
+}
+
+.buttons button.equal:active {
+  box-shadow: 0px 4px 0px var(--bg-key-toggle-hover);
+}
+
+.buttons button:hover {
+  background-color: var(--bg-numbers-hover);
+}
+
+.buttons button:active {
+  box-shadow: 0px 4px 0px var(--bg-numbers-hover);
+}
